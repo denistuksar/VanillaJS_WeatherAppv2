@@ -1,3 +1,5 @@
+const script = require('./public/script');
+
 if(process.env.NODE_ENV !== 'production'){
     require('dotenv').config();
 }
@@ -9,6 +11,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.static('public'));
+app.use('/', script);
 
 app.post('/weather',(req, res) => {
     const url = `https://api.darksky.net/forecast/${DARKSKY_API_KEY}/${req.body.latitude},${req.body.longitude}?units=si`;
