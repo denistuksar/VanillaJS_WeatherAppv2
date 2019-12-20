@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WeatherApp</title>
+    <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDldhI7A_w_jqGdO0U43rXNiIGFVl8x9-c&libraries=places">
+    </script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="location" data-location></div>
+            <div class="general-information">
+                <div class="icon">
+                    <canvas id="icon" width="30" height="30"></canvas>
+                </div>
+                <div class="status" data-status>Enter A Location</div>
+            </div>
+            <div class="temperature" data-temperature="">0°</div>
+            <div class="detail-section">
+                <div class="detail">
+                    <div class="title">Wind Speed</div>
+                    <div class="value" data-wind>0 m/s</div>
+                </div>
+                <div class="detail">
+                    <div class="title">Humidity</div>
+                    <div class="value" data-humidity>0 %</div>
+                </div>
+            </div>
+            <div class="city-search-container">
+                <input type="text" class="city-search" data-city-search placeholder="Enter Location">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
