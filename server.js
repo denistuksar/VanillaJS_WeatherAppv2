@@ -14,6 +14,7 @@ app.post('/weather',(req, res) => {
     const url = `https://api.darksky.net/forecast/${DARKSKY_API_KEY}/${req.body.latitude},${req.body.longitude}?units=si`;
     axios({
         url:url,
+        baseUrl = process.env.baseURL,
         responseType: 'json'
     }).then(data => res.json(data.data.currently))
 });
